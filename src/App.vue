@@ -30,30 +30,30 @@
     </main>
 
     <hr class="guestbook-separator" />
-  </div>
 
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-section">
-        <h3>Über Uns</h3>
-        <p>Baitul Mukarram Masjid e.V.</p>
-        <p>Fontanestraße 17, 12049 Berlin</p>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Über Uns</h3>
+          <p>Baitul Mukarram Masjid e.V.</p>
+          <p>Fontanestraße 17, 12049 Berlin</p>
+        </div>
+        <div class="footer-section">
+          <h3>Kontakt</h3>
+          <p>Email: info@baitul-mukarram-masjid-berlin.de</p>
+          <p>Telefon: 030 6272 5524</p>
+        </div>
+        <div class="footer-section">
+          <h3>Rechtliches</h3>
+          <p><router-link to="/ImpressumView">Impressum</router-link> | <router-link to="/DatenschutzView">Datenschutz</router-link></p>
+        </div>
       </div>
-      <div class="footer-section">
-        <h3>Kontakt</h3>
-        <p>Email: info@baitul-mukarram-masjid-berlin.de</p>
-        <p>Telefon: 030 6272 5524</p>
+      <div class="footer-bottom">
+        <p>© 2025 Baitul Mukarram Masjid e.V. Berlin. Alle Rechte vorbehalten.</p>
+        <p>Favicon von <a href="https://www.vecteezy.com/">vecteezy.com</a></p>
       </div>
-      <div class="footer-section">
-        <h3>Rechtliches</h3>
-        <p><router-link to="/ImpressumView">Impressum</router-link> | <router-link to="/DatenschutzView">Datenschutz</router-link></p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 Baitul Mukarram Masjid e.V. Berlin. Alle Rechte vorbehalten.</p>
-      <p>Favicon von <a href="https://www.vecteezy.com/">vecteezy.com</a></p>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </template>
 <script>
 import CookiePopup from '@/components/CookiePopup.vue'

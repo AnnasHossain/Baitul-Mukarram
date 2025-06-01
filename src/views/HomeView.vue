@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <h2>Die Baitul Mukarram Masjid e.V.</h2>
-    <div class="slider">
+    <div class="slider" @touchstart="startTouch" @touchend="endTouch">
+      <button class="slider-button left" @click="prevImage">&#10094;</button>
+      <button class="slider-button right" @click="nextImage">&#10095;</button>
       <div class="slider-container" :style="{ transform: slidePosition }">
         <img v-for="(image, index) in images" :key="index" :src="image" class="img-fluid" alt="mosque image">
       </div>
@@ -48,18 +50,23 @@
       </div>
       <br>
       <div class="row">
-      <h3 class="d-flex flex-column" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-controls="multiCollapseExample2"><u>Über die Moschee </u></h3>
-      <div class="collapse multi-collapse show" id="multiCollapseExample2">
-            <p><br>Inspiriert von der Baitul Mukarram Moschee in Bangladesh möchten wir eine Moschee schaffen,
-              die der muslimischen Gemeinschaft als Gebetstätte dient und zugleich über unsere bengalische Kultur
-              und Gemeinschaft den interkulturellen Austausch mit Geschwistern des Islams fördert.</p>
-            <img src="@/assets/pexels-neukoelln-baitul-mukarram-front.png" class="img-fluid" alt="front view of mosque in neukoelln">
-            <img src="@/assets/pexels-neukoelln-baitul-mukarram.jpeg" class="img-fluid" alt="mosque in neukoelln">
+        <h3 class="d-flex flex-column" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-controls="multiCollapseExample2"><u>Über die Moschee </u></h3>
+        <div class="collapse multi-collapse show" id="multiCollapseExample2">
+              <p><br>Inspiriert von der Baitul Mukarram Moschee in Bangladesh möchten wir eine Moschee schaffen,
+                die der muslimischen Gemeinschaft als Gebetstätte dient und zugleich über unsere bengalische Kultur
+                und Gemeinschaft den interkulturellen Austausch mit Geschwistern des Islams fördert.</p>
+          <div class="slider" @touchstart="startTouch" @touchend="endTouch">
+            <button class="slider-button left" @click="prevImage">&#10094;</button>
+            <button class="slider-button right" @click="nextImage">&#10095;</button>
+            <div class="slider-container" :style="{ transform: slidePosition }">
+              <img v-for="(image, index) in images" :key="index" :src="image" class="img-fluid" alt="mosque image">
+            </div>
+          </div>
         </div>
+      <p><br>Für die Gebetszeiten orientieren wir uns an der App "MyMasjid"-App:</p>
+      <li><a href="https://apps.apple.com/de/app/my-masjid-community/id1452575134" target="_blank">Herunterladen im Apple App Store</a></li>
+      <li><a href="https://play.google.com/store/apps/details?id=com.teo.mymasjid&hl=de" target="_blank">Herunterladen im Google Play Store</a></li>
     </div>
-    <p><br>Für die Gebetszeiten orientieren wir uns an der App "MyMasjid"-App:</p>
-    <li><a href="https://apps.apple.com/de/app/my-masjid-community/id1452575134" target="_blank">Herunterladen im Apple App Store</a></li>
-    <li><a href="https://play.google.com/store/apps/details?id=com.teo.mymasjid&hl=de" target="_blank">Herunterladen im Google Play Store</a></li>
   </div>
 </template>
 
@@ -71,6 +78,25 @@ export default {
   methods: {
     CalenderPage () {
       this.$router.push('/calender-view') // Weiterleitung zur anderen Seite
+    },
+    nextImage () {
+      this.currentIndex = (this.currentIndex + 1) % this.images.length
+    },
+    prevImage () {
+      this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length
+    },
+    startTouch (e) {
+      this.startX = e.changedTouches[0].clientX
+    },
+    endTouch (e) {
+      const endX = e.changedTouches[0].clientX
+      const diffX = this.startX - endX
+
+      if (diffX > 50) {
+        this.nextImage()
+      } else if (diffX < -50) {
+        this.prevImage()
+      }
     }
   },
   data () {
@@ -86,7 +112,8 @@ export default {
         title: '🕌Gebetszeiten des Eid-ul-Adha 2025',
         description: '1. Gebet: 6:00 Uhr (bangla)\n 2. Gebet: 8:00 Uhr (arabic) \n 3. Gebet: 9:00 Uhr (bangla) \n'
       }],
-      error: 'Zurzeit keine Events'
+      error: 'Zurzeit keine Events',
+      startX: 0
     }
   },
   computed: {
@@ -104,6 +131,7 @@ export default {
   }
 }
 </script>
+
 <style>
 
 .jumma-prayer {
@@ -206,6 +234,20 @@ export default {
     flex-shrink: 0;
   }
 
+  .slider-button {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    padding: 0;
+  }
+
+  .slider-button.left {
+    left: 5px;
+  }
+
+  .slider-button.right {
+    right: 5px;
+  }
 }
 
 .event-separator {
@@ -223,5 +265,37 @@ export default {
 
 .map-link:hover {
   text-decoration: none;
+}
+
+.slider-button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.slider-button.left {
+  left: 10px;
+}
+
+.slider-button.right {
+  right: 10px;
+}
+
+.slider-button:hover {
+  background-color: rgba(0,0,0,0.8);
 }
 </style>
