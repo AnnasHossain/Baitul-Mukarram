@@ -50,37 +50,36 @@ export default {
     return {
       currentPrayer: null,
       prayerTimes: [
-        { date: '01.05', fajr: '3:38', zuhr: '13:09', asr: '17:11', maghrib: '20:38', isha: '22:17' },
-        { date: '02.05', fajr: '3:38', zuhr: '13:09', asr: '17:11', maghrib: '20:40', isha: '22:18' },
-        { date: '03.05', fajr: '3:37', zuhr: '13:08', asr: '17:12', maghrib: '20:42', isha: '22:18' },
-        { date: '04.05', fajr: '3:36', zuhr: '13:08', asr: '17:13', maghrib: '20:43', isha: '22:19' },
-        { date: '05.05', fajr: '3:36', zuhr: '13:08', asr: '17:13', maghrib: '20:45', isha: '22:20' },
-        { date: '06.05', fajr: '3:35', zuhr: '13:08', asr: '17:14', maghrib: '20:47', isha: '22:20' },
-        { date: '07.05', fajr: '3:34', zuhr: '13:08', asr: '17:15', maghrib: '20:48', isha: '22:21' },
-        { date: '08.05', fajr: '3:34', zuhr: '13:08', asr: '17:15', maghrib: '20:50', isha: '22:22' },
-        { date: '09.05', fajr: '3:33', zuhr: '13:08', asr: '17:16', maghrib: '20:52', isha: '22:23' },
-        { date: '10.05', fajr: '3:32', zuhr: '13:08', asr: '17:17', maghrib: '20:53', isha: '22:23' },
-        { date: '11.05', fajr: '3:32', zuhr: '13:08', asr: '17:17', maghrib: '20:55', isha: '22:24' },
-        { date: '12.05', fajr: '3:31', zuhr: '13:08', asr: '17:18', maghrib: '20:57', isha: '22:25' },
-        { date: '13.05', fajr: '3:30', zuhr: '13:08', asr: '17:19', maghrib: '20:58', isha: '22:25' },
-        { date: '14.05', fajr: '3:30', zuhr: '13:08', asr: '17:19', maghrib: '21:00', isha: '22:26' },
-        { date: '15.05', fajr: '3:29', zuhr: '13:08', asr: '17:20', maghrib: '21:01', isha: '22:27' },
-        { date: '16.05', fajr: '3:28', zuhr: '13:08', asr: '17:21', maghrib: '21:03', isha: '22:27' },
-        { date: '17.05', fajr: '3:28', zuhr: '13:08', asr: '17:21', maghrib: '21:05', isha: '22:28' },
-        { date: '18.05', fajr: '3:27', zuhr: '13:08', asr: '17:22', maghrib: '21:06', isha: '22:29' },
-        { date: '19.05', fajr: '3:26', zuhr: '13:08', asr: '17:23', maghrib: '21:08', isha: '22:29' },
-        { date: '20.05', fajr: '3:25', zuhr: '13:08', asr: '17:23', maghrib: '21:09', isha: '22:30' },
-        { date: '21.05', fajr: '3:25', zuhr: '13:08', asr: '17:24', maghrib: '21:11', isha: '22:31' },
-        { date: '22.05', fajr: '3:24', zuhr: '13:08', asr: '17:24', maghrib: '21:12', isha: '22:32' },
-        { date: '23.05', fajr: '3:23', zuhr: '13:08', asr: '17:25', maghrib: '21:14', isha: '22:33' },
-        { date: '24.05', fajr: '3:22', zuhr: '13:08', asr: '17:25', maghrib: '21:15', isha: '22:34' },
-        { date: '25.05', fajr: '3:22', zuhr: '13:08', asr: '17:26', maghrib: '21:16', isha: '22:35' },
-        { date: '26.05', fajr: '3:21', zuhr: '13:08', asr: '17:27', maghrib: '21:18', isha: '22:36' },
-        { date: '27.05', fajr: '3:20', zuhr: '13:09', asr: '17:27', maghrib: '21:19', isha: '22:37' },
-        { date: '28.05', fajr: '3:20', zuhr: '13:09', asr: '17:28', maghrib: '21:20', isha: '22:38' },
-        { date: '29.05', fajr: '3:19', zuhr: '13:09', asr: '17:28', maghrib: '21:22', isha: '22:39' },
-        { date: '30.05', fajr: '3:19', zuhr: '13:09', asr: '17:29', maghrib: '21:23', isha: '22:40' },
-        { date: '31.05', fajr: '3:18', zuhr: '13:09', asr: '17:29', maghrib: '21:24', isha: '22:41' }
+        { date: '01.06', fajr: '3:18', shouruq: '4:43', zuhr: '13:09', asr: '17:30', maghrib: '21:25', isha: '22:41' },
+        { date: '02.06', fajr: '3:17', shouruq: '4:43', zuhr: '13:09', asr: '17:30', maghrib: '21:27', isha: '22:42' },
+        { date: '03.06', fajr: '3:17', shouruq: '4:43', zuhr: '13:10', asr: '17:31', maghrib: '21:28', isha: '22:43' },
+        { date: '04.06', fajr: '3:16', shouruq: '4:44', zuhr: '13:10', asr: '17:31', maghrib: '21:29', isha: '22:44' },
+        { date: '05.06', fajr: '3:16', shouruq: '4:44', zuhr: '13:10', asr: '17:32', maghrib: '21:30', isha: '22:44' },
+        { date: '06.06', fajr: '3:16', shouruq: '4:44', zuhr: '13:10', asr: '17:32', maghrib: '21:31', isha: '22:45' },
+        { date: '07.06', fajr: '3:15', shouruq: '4:44', zuhr: '13:10', asr: '17:32', maghrib: '21:32', isha: '22:46' },
+        { date: '08.06', fajr: '3:15', shouruq: '4:45', zuhr: '13:10', asr: '17:33', maghrib: '21:33', isha: '22:47' },
+        { date: '09.06', fajr: '3:15', shouruq: '4:45', zuhr: '13:11', asr: '17:33', maghrib: '21:33', isha: '22:47' },
+        { date: '10.06', fajr: '3:15', shouruq: '4:45', zuhr: '13:11', asr: '17:34', maghrib: '21:34', isha: '22:48' },
+        { date: '11.06', fajr: '3:15', shouruq: '4:45', zuhr: '13:11', asr: '17:34', maghrib: '21:35', isha: '22:48' },
+        { date: '12.06', fajr: '3:14', shouruq: '4:46', zuhr: '13:11', asr: '17:34', maghrib: '21:36', isha: '22:49' },
+        { date: '13.06', fajr: '3:14', shouruq: '4:46', zuhr: '13:11', asr: '17:35', maghrib: '21:37', isha: '22:49' },
+        { date: '14.06', fajr: '3:14', shouruq: '4:46', zuhr: '13:12', asr: '17:35', maghrib: '21:37', isha: '22:50' },
+        { date: '15.06', fajr: '3:14', shouruq: '4:46', zuhr: '13:12', asr: '17:35', maghrib: '21:38', isha: '22:50' },
+        { date: '16.06', fajr: '3:14', shouruq: '4:46', zuhr: '13:12', asr: '17:36', maghrib: '21:38', isha: '22:51' },
+        { date: '17.06', fajr: '3:14', shouruq: '4:47', zuhr: '13:12', asr: '17:36', maghrib: '21:39', isha: '22:51' },
+        { date: '18.06', fajr: '3:14', shouruq: '4:47', zuhr: '13:13', asr: '17:36', maghrib: '21:39', isha: '22:52' },
+        { date: '19.06', fajr: '3:15', shouruq: '4:47', zuhr: '13:13', asr: '17:37', maghrib: '21:40', isha: '22:52' },
+        { date: '20.06', fajr: '3:15', shouruq: '4:47', zuhr: '13:13', asr: '17:37', maghrib: '21:40', isha: '22:52' },
+        { date: '21.06', fajr: '3:15', shouruq: '4:47', zuhr: '13:13', asr: '17:37', maghrib: '21:40', isha: '22:52' },
+        { date: '22.06', fajr: '3:15', shouruq: '4:48', zuhr: '13:13', asr: '17:37', maghrib: '21:40', isha: '22:53' },
+        { date: '23.06', fajr: '3:15', shouruq: '4:48', zuhr: '13:14', asr: '17:38', maghrib: '21:41', isha: '22:53' },
+        { date: '24.06', fajr: '3:16', shouruq: '4:48', zuhr: '13:14', asr: '17:38', maghrib: '21:41', isha: '22:53' },
+        { date: '25.06', fajr: '3:16', shouruq: '4:48', zuhr: '13:14', asr: '17:38', maghrib: '21:41', isha: '22:53' },
+        { date: '26.06', fajr: '3:16', shouruq: '4:48', zuhr: '13:14', asr: '17:38', maghrib: '21:41', isha: '22:53' },
+        { date: '27.06', fajr: '3:17', shouruq: '4:49', zuhr: '13:14', asr: '17:38', maghrib: '21:41', isha: '22:53' },
+        { date: '28.06', fajr: '3:17', shouruq: '4:49', zuhr: '13:15', asr: '17:38', maghrib: '21:41', isha: '22:53' },
+        { date: '29.06', fajr: '3:17', shouruq: '4:49', zuhr: '13:15', asr: '17:38', maghrib: '21:40', isha: '22:53' },
+        { date: '30.06', fajr: '3:18', shouruq: '4:50', zuhr: '13:15', asr: '17:38', maghrib: '21:40', isha: '22:53' }
       ],
       dailyPrayers: {},
       loading: true,
@@ -123,11 +122,15 @@ export default {
     },
     updateCurrentPrayer () {
       const now = new Date()
+      // Zum Testen der Zeit
+      // now.setHours(2)
+      // now.setMinutes(0)
       const currentTime = now.getHours() * 60 + now.getMinutes() // Minuten seit Mitternacht
       const today = this.prayerTimes.find(time => time.date === this.formatDate(now.getDate(), now.getMonth() + 1))
 
       if (!today) return
 
+      // prayerTimesArray mit shouruq, falls vorhanden
       const prayerTimesArray = [
         { name: 'Fajr', time: today.fajr },
         { name: 'Zuhr', time: today.zuhr },
@@ -135,8 +138,12 @@ export default {
         { name: 'Maghrib', time: today.maghrib },
         { name: 'Isha', time: today.isha }
       ]
+      // Shouruq als gesonderter Eintrag für die Logik (aber nicht als offizielles Gebet)
+      if (today.shouruq) {
+        prayerTimesArray.splice(1, 0, { name: 'Shouruq', time: today.shouruq })
+      }
 
-      let nextPrayer = null
+      // Debug-Ausgaben
       console.log('Aktuelle Zeit (Minuten seit Mitternacht):', currentTime)
       console.log('Heutige Gebetszeiten:', today)
 
@@ -144,24 +151,34 @@ export default {
         const prayerTime = prayerTimesArray[i]
         const [hours, minutes] = prayerTime.time.split(':').map(Number)
         const prayerMinutes = hours * 60 + minutes
-        console.log('Aktuelle Zeit (Minuten seit Mitternacht):', currentTime)
-        console.log('Heutige Gebetszeiten:', today)
-        console.log('Gebet geprüft:', prayerTime.name, 'um', prayerTime.time)
-        if (currentTime >= prayerMinutes && currentTime < prayerMinutes + 5) {
+
+        let nextPrayerMinutes = Infinity
+        // Spezielle Behandlung: Fajr läuft bis Shouruq
+        if (i === 0 && today.shouruq) {
+          const [shouruqHours, shouruqMinutes] = today.shouruq.split(':').map(Number)
+          nextPrayerMinutes = shouruqHours * 60 + shouruqMinutes
+        } else if (i + 1 < prayerTimesArray.length) {
+          // Normale Fälle: nächste Gebetszeit am gleichen Tag
+          const [nextHours, nextMinutes] = prayerTimesArray[i + 1].time.split(':').map(Number)
+          nextPrayerMinutes = nextHours * 60 + nextMinutes
+        } else {
+          // Sonderfall: letztes Gebet (Isha) – läuft bis zum nächsten Fajr am nächsten Tag
+          const [fajrHours, fajrMinutes] = prayerTimesArray[0].time.split(':').map(Number)
+          nextPrayerMinutes = fajrHours * 60 + fajrMinutes + 1440 // +1 Tag
+        }
+
+        // Shouruq ist kein offizielles Gebet, daher nicht als currentPrayer setzen
+        if (
+          prayerTime.name !== 'Shouruq' &&
+          (
+            (currentTime >= prayerMinutes && currentTime < nextPrayerMinutes) ||
+            (nextPrayerMinutes > 1440 && currentTime < nextPrayerMinutes - 1440)
+          )
+        ) {
           this.currentPrayer = prayerTime.name
-          console.log('Aktuelle Zeit (Minuten seit Mitternacht):', currentTime)
-          console.log('Heutige Gebetszeiten:', today)
           return
-        } else if (currentTime < prayerMinutes) {
-          nextPrayer = prayerTime.name
-          console.log('Aktuelle Zeit (Minuten seit Mitternacht):', currentTime)
-          console.log('Heutige Gebetszeiten:', today)
-          break
         }
       }
-      console.log('heutige gebetszeiten:', today)
-      console.log(new Date().toLocaleString())
-      this.currentPrayer = nextPrayer
     }
   }
 }
@@ -232,11 +249,10 @@ export default {
   font-size: 1.2em;
   margin-top: 20px;
 }
-</style>
-
 .active-prayer {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   background: var(--primary-color);
   color: white;
 }
+</style>
